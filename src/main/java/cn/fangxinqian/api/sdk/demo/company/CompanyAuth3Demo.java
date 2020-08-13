@@ -19,7 +19,7 @@ public class CompanyAuth3Demo {
         TokenReq tr = new TokenReq()
                 .setKey("xcv123df4l")
                 .setSecret("f60e1961fb788d2bbd99088cad4bbc00");
-        String token = (String) FxqRquest.token(tr).getData();
+        String token = (String) FxqRquest.getToken(tr).getData();
 
         CompanyAuth3Req ca3 = new CompanyAuth3Req()
                 .setKeyword("123526364077430325C")

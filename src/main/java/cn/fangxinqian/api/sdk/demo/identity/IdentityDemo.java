@@ -12,7 +12,6 @@ import java.io.IOException;
  * @description
  * @since 2020/8/4
  */
-@Slf4j
 public class IdentityDemo {
 
     static class Identity2{
@@ -20,7 +19,7 @@ public class IdentityDemo {
             TokenReq tr = new TokenReq()
                     .setKey("xcv123df4l")
                     .setSecret("f60e1961fb788d2bbd99088cad4bbc00");
-            String token = (String) FxqRquest.token(tr).getData();
+            String token = (String) FxqRquest.getToken(tr).getData();
 
             Identity2Req i2 = new Identity2Req()
                     .setIdCardNo("360731199602030212")
@@ -35,7 +34,7 @@ public class IdentityDemo {
             TokenReq tr = new TokenReq()
                     .setKey("xcv123df4l")
                     .setSecret("f60e1961fb788d2bbd99088cad4bbc00");
-            String token = (String) FxqRquest.token(tr).getData();
+            String token = (String) FxqRquest.getToken(tr).getData();
             Identity3Req i3 = new Identity3Req()
                     .setIdCardNo("360731199602030212")
                     .setRealName("蒙大拿")

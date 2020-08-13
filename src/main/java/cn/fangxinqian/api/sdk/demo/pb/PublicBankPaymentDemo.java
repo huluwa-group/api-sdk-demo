@@ -19,7 +19,7 @@ public class PublicBankPaymentDemo {
         TokenReq tr = new TokenReq()
                 .setKey("xcv123df4l")
                 .setSecret("f60e1961fb788d2bbd99088cad4bbc00");
-        String token = (String) FxqRquest.token(tr).getData();
+        String token = (String) FxqRquest.getToken(tr).getData();
 
         PublicBankReq pb = new PublicBankReq()
                 .setNo("123526364077430325C")

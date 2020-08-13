@@ -14,7 +14,6 @@ import java.io.IOException;
  * @description
  * @since 2020/8/4
  */
-@Slf4j
 public class BankCardDemo {
 
     static class BankCard3{
@@ -22,7 +21,7 @@ public class BankCardDemo {
             TokenReq tr = new TokenReq()
                     .setKey("xcv123df4l")
                     .setSecret("f60e1961fb788d2bbd99088cad4bbc00");
-            String token = (String) FxqRquest.token(tr).getData();
+            String token = (String) FxqRquest.getToken(tr).getData();
 
             BankCard3Req bc3 = new BankCard3Req()
                     .setBankCardNo("123456789012345678")
@@ -38,7 +37,7 @@ public class BankCardDemo {
             TokenReq tr = new TokenReq()
                     .setKey("xcv123df4l")
                     .setSecret("f60e1961fb788d2bbd99088cad4bbc00");
-            String token = (String) FxqRquest.token(tr).getData();
+            String token = (String) FxqRquest.getToken(tr).getData();
             BankCard4Req bc4 = new BankCard4Req()
                     .setBankCardNo("123456789012345678")
                     .setIdCardNo("360731199602030212")

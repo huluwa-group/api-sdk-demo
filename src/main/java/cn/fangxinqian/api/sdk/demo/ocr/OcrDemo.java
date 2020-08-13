@@ -12,7 +12,6 @@ import java.io.IOException;
  * @description
  * @since 2020/8/4
  */
-@Slf4j
 public class OcrDemo {
 
     static class OcrBusinessLicense{
@@ -20,7 +19,7 @@ public class OcrDemo {
             TokenReq tr = new TokenReq()
                     .setKey("xcv123df4l")
                     .setSecret("f60e1961fb788d2bbd99088cad4bbc00");
-            String token = (String) FxqRquest.token(tr).getData();
+            String token = (String) FxqRquest.getToken(tr).getData();
 
             OcrReq ocr = new OcrReq().setImage("*********");
             ResultVO vo = FxqRquest.ocrBusinessLicense(ocr,token);
@@ -33,7 +32,7 @@ public class OcrDemo {
             TokenReq tr = new TokenReq()
                     .setKey("xcv123df4l")
                     .setSecret("f60e1961fb788d2bbd99088cad4bbc00");
-            String token = (String) FxqRquest.token(tr).getData();
+            String token = (String) FxqRquest.getToken(tr).getData();
             OcrIdCardReq oic = new OcrIdCardReq()
                     .setIdCardSide("front")
                     .setImage("*********");
@@ -47,7 +46,7 @@ public class OcrDemo {
             TokenReq tr = new TokenReq()
                     .setKey("xcv123df4l")
                     .setSecret("f60e1961fb788d2bbd99088cad4bbc00");
-            String token = (String) FxqRquest.token(tr).getData();
+            String token = (String) FxqRquest.getToken(tr).getData();
             OcrReq ocr = new OcrReq().setImage("*********");
             ResultVO vo = FxqRquest.ocrVehicleLicense(ocr,token);
             System.out.println(String.format("返回的数据为：%s",vo.toString()));
@@ -59,7 +58,7 @@ public class OcrDemo {
             TokenReq tr = new TokenReq()
                     .setKey("xcv123df4l")
                     .setSecret("f60e1961fb788d2bbd99088cad4bbc00");
-            String token = (String) FxqRquest.token(tr).getData();
+            String token = (String) FxqRquest.getToken(tr).getData();
             OcrReq ocr = new OcrReq().setImage("*********");
             ResultVO vo = FxqRquest.ocrDriveLicense(ocr,token);
             System.out.println(String.format("返回的数据为：%s",vo.toString()));
@@ -71,7 +70,7 @@ public class OcrDemo {
             TokenReq tr = new TokenReq()
                     .setKey("xcv123df4l")
                     .setSecret("f60e1961fb788d2bbd99088cad4bbc00");
-            String token = (String) FxqRquest.token(tr).getData();
+            String token = (String) FxqRquest.getToken(tr).getData();
             OcrReq ocr = new OcrReq().setImage("*********");
             ResultVO vo = FxqRquest.ocrBankCard(ocr,token);
             System.out.println(String.format("返回的数据为：%s",vo.toString()));
